@@ -6,6 +6,8 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SdkSuppress
 import androidx.test.platform.app.InstrumentationRegistry.getInstrumentation
 import androidx.test.uiautomator.UiDevice
+import com.geekbrains.tests.context
+import com.geekbrains.tests.packageName
 import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -13,12 +15,6 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 @SdkSuppress(minSdkVersion = 18)
 class InitialTest {
-
-    //Контекст нам понадобится для запуска нужных экранов и получения packageName
-    private val context = ApplicationProvider.getApplicationContext<Context>()
-
-    //Путь к классам нашего приложения, которые мы будем тестировать
-    private val packageName = context.packageName
 
     //Убеждаемся, что uiDevice не null
     @Test
